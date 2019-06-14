@@ -1,9 +1,10 @@
 package com.quiz.app.services;
 
+import com.quiz.app.vo.RegistrationResult;
 import com.quiz.app.vo.UserRegister;
 
 public interface UserManagementService {
 
-	public boolean registerUser(UserRegister userRegister);
+	public RegistrationResult registerUser(UserRegister userRegister);
 	
 }

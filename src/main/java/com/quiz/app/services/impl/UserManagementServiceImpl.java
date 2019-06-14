@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.quiz.app.domain.User;
+import com.quiz.app.enums.Status;
 import com.quiz.app.repositories.UserRepository;
 import com.quiz.app.services.UserManagementService;
+import com.quiz.app.vo.RegistrationResult;
 import com.quiz.app.vo.UserRegister;
 
 @Service
@@ -15,14 +17,17 @@ public class UserManagementServiceImpl implements UserManagementService {
 	private UserRepository userRepository;
 	
 	@Override
-	public boolean registerUser(UserRegister userRegister) {
+	public RegistrationResult registerUser(UserRegister userRegister) {
 		User user = new User();
 		user.setEmail(userRegister.getEmail());
 		user.setDateOfBirth(userRegister.getDateofBirth());
 		user.setName(userRegister.getName());
 		userRepository.save(user);
+		RegistrationResult registrationResult = new RegistrationResult();
+		registrationResult.setDescription(Status.SUCCESS.getDescription());
+		registrationResult.setResultCode(Status.SUCCESS.getCode());
 		//TO DO error handling
-		return true;
+		return registrationResult;
 	}
 
 }
