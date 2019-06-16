@@ -1,6 +1,6 @@
 # Quiz-Services
 
-This repository contains implementation of RESTful web service using Spring boot framework with PostgreSQL database.
+This repository contains implementation of RESTful web service using Spring boot framework with PostgreSQL database for quiz-now application.
 
 ## Requirements:
 - JDK 1.8
