@@ -2,7 +2,7 @@ package com.quiz.app.vo;
 
 import java.sql.Date;
 
-public class UserRegister {
+public class UserRegister {    
 	private String name;
 	private String email;
 	private Date dateofBirth;

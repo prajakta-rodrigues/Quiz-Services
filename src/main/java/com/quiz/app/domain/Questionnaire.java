@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,9 +19,9 @@ public class Questionnaire {
 	@Column(name = "id")
 	private int id;
 	
-	@ManyToOne
+	@OneToOne
 	@JoinColumn(name = "creator_id")
-    private int creatorId;
+    private User creator;
 	
 	public int getId() {
 		return id;
@@ -30,12 +31,13 @@ public class Questionnaire {
 		this.id = id;
 	}
 
-	public int getCreatorId() {
-		return creatorId;
+
+	public User getCreator() {
+		return creator;
 	}
 
-	public void setCreatorId(int creatorId) {
-		this.creatorId = creatorId;
+	public void setCreator(User creator) {
+		this.creator = creator;
 	}
 
 	public Timestamp getCreatedDate() {

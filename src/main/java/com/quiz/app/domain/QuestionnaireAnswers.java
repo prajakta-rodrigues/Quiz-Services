@@ -2,6 +2,7 @@ package com.quiz.app.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -9,6 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "questionnaire_answers", schema = "quiz")
 public class QuestionnaireAnswers {
+	
 	
 	public int getId() {
 		return id;
@@ -34,6 +36,7 @@ public class QuestionnaireAnswers {
 		this.questionnaireOptions = questionnaireOptions;
 	}
 
+	@Id
 	@Column(name = "id")
 	private int id;
 	
