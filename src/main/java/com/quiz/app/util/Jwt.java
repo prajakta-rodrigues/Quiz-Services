@@ -13,6 +13,11 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
+/**
+ * 
+ * @author https://www.javainuse.com/spring/boot-jwt
+ *
+ */
 @Component
 public class Jwt implements Serializable {
 	private static final long serialVersionUID = -2550185165626007488L;

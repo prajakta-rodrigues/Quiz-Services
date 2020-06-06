@@ -4,6 +4,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import com.quiz.app.domain.User;
 import com.quiz.app.enums.Status;
@@ -19,23 +20,24 @@ public class UserDetailsServiceImpl implements UserManagementService {
 
   @Autowired
   private UserRepository userRepository;
-
   
+  @Autowired
+  private PasswordEncoder pwdEncoder; 
+
   @Override
   public RegistrationResult registerUser(UserRegister userRegister) throws QuizServicesException {
     User user = new User();
 
-    if (null != userRegister.getEmail()) {
-      user.setEmail(userRegister.getEmail());
+    if (null != userRegister.getUsername()) {
+      user.setUsername(userRegister.getUsername());
     }
-    user.setDateOfBirth(userRegister.getDateofBirth());
     if (null != userRegister.getName()) {
       user.setName(userRegister.getName());
     } else {
       new QuizServicesException("User name is null");
     }
     if (null != userRegister.getPassword()) {
-      user.setPassword(userRegister.getPassword());
+      user.setPassword(pwdEncoder.encode(userRegister.getPassword()));
     } else {
       new Exception("Password is null");
     }
@@ -55,8 +57,8 @@ public class UserDetailsServiceImpl implements UserManagementService {
 
   
   @Override
-  public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-    List<User> userList = userRepository.findByEmail(email);
+  public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    List<User> userList = userRepository.findByUsername(username);
     if (userList.isEmpty()) {
       throw new UsernameNotFoundException("No user available with given username");
     } else {

@@ -11,6 +11,7 @@ public interface UserManagementService extends UserDetailsService {
 
   public RegistrationResult registerUser(UserRegister userRegister) throws QuizServicesException;
 
+  @Override
   public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException;
 
 }

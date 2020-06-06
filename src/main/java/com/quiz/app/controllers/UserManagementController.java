@@ -35,7 +35,7 @@ public class UserManagementController {
     @Autowired
     private UserManagementService userDetailsService;
 
-	@RequestMapping(value = "user/register", method = RequestMethod.POST)
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	@ResponseBody
 	public ResponseEntity<RegistrationResult> registerUser(@RequestBody UserRegister userRegister) {
 	  try {
@@ -46,23 +46,23 @@ public class UserManagementController {
 	  }
 	}
 
-	@RequestMapping(value = "user/login", method = RequestMethod.POST)
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	@ResponseBody
 	public ResponseEntity<LoginResponse> login(@RequestBody UserLogin userLogin) {
 	  try {
-      authenticate(userLogin.getEmail(), userLogin.getPassword());
-    } catch (Exception e) {
-      return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
-    }
-      final UserDetails userDetails = userDetailsService.loadUserByUsername(userLogin.getEmail());
+      authenticate(userLogin.getUsername(), userLogin.getPassword());
+      final UserDetails userDetails = userDetailsService.loadUserByUsername(userLogin.getUsername());
       final String token = jwtTokenUtil.generateToken(userDetails);
       return ResponseEntity.ok(new LoginResponse(token));
+	  } catch (Exception e) {
+	      return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+	    }
 	}
 	
 
-    private void authenticate(String email, String password) throws QuizServicesException {
+    private void authenticate(String username, String password) throws QuizServicesException {
         try {
-            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(email, password));
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
         } catch (DisabledException e) {
             throw new QuizServicesException("User is disabled", e);
         } catch (BadCredentialsException e) {

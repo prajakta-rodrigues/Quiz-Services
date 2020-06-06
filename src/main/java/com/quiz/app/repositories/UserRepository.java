@@ -10,5 +10,5 @@ import com.quiz.app.domain.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
 	
-	List<User> findByEmail(String email);
+	List<User> findByUsername(String username);
 }
