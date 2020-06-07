@@ -12,7 +12,7 @@ public class PrimaryUser implements UserDetails {
   private static final long serialVersionUID = 124266648803L;
 
   public PrimaryUser(User user) {
-    this.username = user.getName();
+    this.username = user.getUsername();
     this.password = user.getPassword();
   }
   
