@@ -17,7 +17,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
-		 <start-class>com.isolation.icebreakers.IcebreakersApplication</start-class>
+		 <start-class>com.quiz.app.QuizApplication</start-class>
 	</properties>
 
 	<dependencies>
