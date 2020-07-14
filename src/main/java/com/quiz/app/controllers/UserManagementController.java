@@ -70,11 +70,4 @@ public class UserManagementController {
         }
     }
 	
-	@RequestMapping(value = "/test", method = RequestMethod.GET)
-    @ResponseBody
-    public String test() {
-        // TO DO
-        return "hello";
-    }
-	
 }
