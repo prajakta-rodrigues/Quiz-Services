@@ -1,0 +1,143 @@
+{
+	"id": "f029cd91-9df4-f06d-c6b1-fe61a270fc61",
+	"name": "Quiz-App-Urls",
+	"description": "",
+	"order": [
+		"d5ed8182-5dcb-4681-e7d7-8f9d2eee5571",
+		"fa2de6d7-4fc5-576b-a5e8-71e81460b193",
+		"1f5c7445-7397-c7f4-a740-f890df79fcbf",
+		"e246ccff-d6c3-56a3-89e0-2bd9df175d98"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1595286308360,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "1f5c7445-7397-c7f4-a740-f890df79fcbf",
+			"headers": "Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMUBnbWFpbC5jb20iLCJleHAiOjE1OTUzMDQyNjMsImlhdCI6MTU5NTI4NjI2M30.Pm2uQ1316_fSmo6kfpg56B616Hp5uE7u-r7tMZxKg-0oTp3ECOdJdroaa5vzQVEFyMxeB4hSUSPDLhFQ5gV7MQ\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMUBnbWFpbC5jb20iLCJleHAiOjE1OTUzMDQyNjMsImlhdCI6MTU5NTI4NjI2M30.Pm2uQ1316_fSmo6kfpg56B616Hp5uE7u-r7tMZxKg-0oTp3ECOdJdroaa5vzQVEFyMxeB4hSUSPDLhFQ5gV7MQ",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/addCategory",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1595288517132,
+			"name": "http://localhost:8080/addCategory",
+			"description": "",
+			"collectionId": "f029cd91-9df4-f06d-c6b1-fe61a270fc61",
+			"responses": [],
+			"rawModeData": "\n    {\n        \"description\": \"<insert General Description>\",\n        \"name\": \"<insert-name>\"\n    }"
+		},
+		{
+			"id": "d5ed8182-5dcb-4681-e7d7-8f9d2eee5571",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/register",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1595288361400,
+			"name": "http://localhost:8080/register",
+			"description": "",
+			"collectionId": "f029cd91-9df4-f06d-c6b1-fe61a270fc61",
+			"responses": [],
+			"rawModeData": "{\n\t\"name\":\"<insert-name>\",\n\t\"username\":\"<insert-username>\",\n\t\"password\": \"<insert-password>\"\n}"
+		},
+		{
+			"id": "e246ccff-d6c3-56a3-89e0-2bd9df175d98",
+			"headers": "Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMUBnbWFpbC5jb20iLCJleHAiOjE1OTUzMDQyNjMsImlhdCI6MTU5NTI4NjI2M30.Pm2uQ1316_fSmo6kfpg56B616Hp5uE7u-r7tMZxKg-0oTp3ECOdJdroaa5vzQVEFyMxeB4hSUSPDLhFQ5gV7MQ\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMUBnbWFpbC5jb20iLCJleHAiOjE1OTUzMDQyNjMsImlhdCI6MTU5NTI4NjI2M30.Pm2uQ1316_fSmo6kfpg56B616Hp5uE7u-r7tMZxKg-0oTp3ECOdJdroaa5vzQVEFyMxeB4hSUSPDLhFQ5gV7MQ",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/viewAllCategories",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "f029cd91-9df4-f06d-c6b1-fe61a270fc61",
+			"data": null,
+			"dataMode": "params",
+			"name": "http://localhost:8080/viewAllCategories",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1595287664383,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "fa2de6d7-4fc5-576b-a5e8-71e81460b193",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1595288459127,
+			"name": "http://localhost:8080/login",
+			"description": "",
+			"collectionId": "f029cd91-9df4-f06d-c6b1-fe61a270fc61",
+			"responses": [],
+			"rawModeData": "{\n\t\"username\":\"<insert-username>\",\n\t\"password\": \"<insert-password>\"\n}"
+		}
+	]
+}
