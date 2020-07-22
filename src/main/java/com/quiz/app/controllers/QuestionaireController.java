@@ -6,7 +6,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.quiz.app.services.QuestionnaireService;
 import com.quiz.app.vo.CreateQuestionnaireRequest;
@@ -19,7 +18,6 @@ public class QuestionaireController {
   private QuestionnaireService questionnaireService;
 
   @RequestMapping(value = "/createQuestionnaire", method = RequestMethod.POST)
-  @ResponseBody
   public ResponseEntity<GenericResponse> createQuestionaire(
       @RequestBody CreateQuestionnaireRequest createQuestionaireRequest) {
     try {
@@ -33,7 +31,6 @@ public class QuestionaireController {
   }
   
   @RequestMapping(value = "/test", method = RequestMethod.GET)
-  @ResponseBody
   public String test() {
       // TO DO
       return "hello";

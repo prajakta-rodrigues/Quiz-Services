@@ -27,12 +27,10 @@ question_description varchar(250));
 
 create table quiz.Questionnaire_options(id int primary key,
 question_id int references quiz.questionnaire_questions(id),
-option_description varchar(200),
-option_image varchar(200));
-
-create table quiz.Questionnaire_answers(id int primary key,
-question_id int references quiz.Questionnaire_questions(id),
-option_id int references quiz.Questionnaire_options(id));
+text varchar(200),
+option_image varchar(200),
+is_answer boolean
+);
 
 create table quiz.questionnaire_Respondent(id int primary key,
 user_id int references quiz.user(id),

@@ -11,7 +11,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.quiz.app.exceptions.QuizServicesException;
 import com.quiz.app.services.UserManagementService;
@@ -36,7 +35,6 @@ public class UserManagementController {
     private UserManagementService userDetailsService;
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
-	@ResponseBody
 	public ResponseEntity<RegistrationResult> registerUser(@RequestBody UserRegister userRegister) {
 	  try {
 	     return new ResponseEntity<>(userManagementService.registerUser(userRegister), HttpStatus.OK);
@@ -47,7 +45,6 @@ public class UserManagementController {
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	@ResponseBody
 	public ResponseEntity<LoginResponse> login(@RequestBody UserLogin userLogin) {
 	  try {
       authenticate(userLogin.getUsername(), userLogin.getPassword());

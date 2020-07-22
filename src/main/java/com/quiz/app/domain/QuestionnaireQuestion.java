@@ -32,19 +32,19 @@ public class QuestionnaireQuestion {
 		return questionaire;
 	}
 
-	public void setQuestionaire(Questionnaire questionaire) {
+	public void setQuestionnaire(Questionnaire questionaire) {
 		this.questionaire = questionaire;
 	}
 
-	public int getQuestionDescription() {
+	public String getQuestionDescription() {
 		return questionDescription;
 	}
 
-	public void setQuestionDescription(int questionDescription) {
+	public void setQuestionDescription(String questionDescription) {
 		this.questionDescription = questionDescription;
 	}
 
 	@Column(name = "question_description")
-	private int	questionDescription;
+	private String questionDescription;
 	
 }
