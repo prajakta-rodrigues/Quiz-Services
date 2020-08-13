@@ -1,4 +1,4 @@
-# Quiz-Services
+# Overview
 
 This repository contains implementation of RESTful web service using Spring boot framework with PostgreSQL database for quiz-now application.
 
@@ -8,7 +8,7 @@ This repository contains implementation of RESTful web service using Spring boot
 - PGAdmin 4
 - Maven 3.6
 
-## Steps for getting started:
+## Install:
 1. Clone the repository
 2. Run the startup.sql script present under resources in PGAdmin to create the database(can also modify spring.jpa.hibernate.ddl-auto property under application.properties from update to create).
 3. Modify the application properties to point to your local postgreSQL database.
